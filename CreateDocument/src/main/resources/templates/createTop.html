@@ -3,12 +3,89 @@
     th:replace="~{template::layout(~{::body/content()})}">
 <head>
     <meta charset="utf-8" />
+    <link rel="shortcut icon" th:href="@{/images/favicon.ico}" >
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/create.css}" type="text/css">
     <script th:src="@{/js/jquery-3.6.3.min.js}"></script>
+    <script th:src="@{/js/create.js}"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>作成top</title>
 </head>
 <body id="main">
-    <div>ここはメインだけを書けばよいのか</div>
+    <div class="title text-center text-primary fw-bolder">新しい資料を作りましょう</div>
+    <div class="text-center text">下のテンプレートを選んで作成を始めよう</div>
+    <table class="caset_list">
+		<tbody class="table_body">
+		<tr class="table_row">
+			<td class="caset_emp"></td>
+			<td class="caset text-center button">
+				<div>白紙から始める</div>
+				<img th:src="@{/getJpg?name=createTop/template}" width="90%">
+			</td>
+			<td class="caset_emp"></td>
+			<td class="caset text-center button">
+				<div>シンプルな構成</div>
+				<img th:src="@{/getJpg?name=createTop/template}" width="90%">
+			</td>
+			<td class="caset_emp"></td>
+			<td class="caset text-center button">
+				<div>カレンダー</div>
+				<img th:src="@{/getJpg?name=createTop/template}" width="90%">
+			</td>
+			<td class="caset_emp"></td>
+			<td class="caset text-center button">
+				<div>レポート</div>
+				<img th:src="@{/getJpg?name=createTop/template}" width="90%">
+			</td>
+			<td class="caset_emp"></td>
+		</tr>
+		<tr class="table_row_emp"></tr>
+		<tr class="table_row">
+			<td class="caset_emp"></td>
+			<td class="caset text-center button">
+				<div>パンフレット</div>
+				<img th:src="@{/getJpg?name=createTop/template}" width="90%">
+			</td>
+			<td class="caset_emp"></td>
+			<td class="caset text-center button">
+				<div>お知らせ</div>
+				<img th:src="@{/getJpg?name=createTop/template}" width="90%">
+			</td>
+			<td class="caset_emp"></td>
+			<td class="caset text-center button">
+				<div>メモ帳</div>
+				<img th:src="@{/getJpg?name=createTop/template}" width="90%">
+			</td>
+			<td class="caset_emp"></td>
+			<td class="caset text-center button">
+				<div>画像</div>
+				<img th:src="@{/getJpg?name=createTop/template}" width="90%">
+			</td>
+		</tr>
+		<tr class="table_row_emp"></tr>
+		<tr class="table_row">
+			<td class="caset_emp"></td>
+			<td class="caset text-center button">
+				<div>カセットA</div>
+				<img th:src="@{/getJpg?name=createTop/template}" width="90%">
+			</td>
+			<td class="caset_emp"></td>
+			<td class="caset text-center button">
+				<div>カセットB</div>
+				<img th:src="@{/getJpg?name=createTop/template}" width="90%">
+			</td>
+			<td class="caset_emp"></td>
+			<td class="caset text-center button">
+				<div>カセットC</div>
+				<img th:src="@{/getJpg?name=createTop/template}" width="90%">
+			</td>
+			<td class="caset_emp"></td>
+			<td class="caset text-center button">
+				<div>カセットD</div>
+				<img th:src="@{/getJpg?name=createTop/template}" width="90%">
+			</td>
+		</tr>
+		</tbody>
+	</table>
 </body>
 </html>

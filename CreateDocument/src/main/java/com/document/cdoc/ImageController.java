@@ -37,6 +37,26 @@ public class ImageController {
 		}
 		return new HttpEntity<byte[]>(byteImg,headers);
 	}
+
+	@RequestMapping("/getJpg")
+	@ResponseBody
+	public HttpEntity<byte[]> getJpg(@RequestParam("name") String fileName){
+		Path path = Paths.get("src/main/resources/static/images/"+ fileName +".jpg");
+		byte[] byteImg = null;
+		HttpHeaders headers = null;
+		try {
+			//バイト列に変換
+			byteImg = Files.readAllBytes(path);
+			headers = new HttpHeaders();
+			
+			//Responseのヘッダーを作成
+			headers.setContentType(MediaType.IMAGE_PNG);
+			headers.setContentLength(byteImg.length);
+		}catch(IOException e) {
+			return null;
+		}
+		return new HttpEntity<byte[]>(byteImg,headers);
+	}
 	
 
 }
